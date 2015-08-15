@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Nut Parser</title>
+    <script src="nut-parser.js"></script>
+</head>
+<body>
+<script>
+    {"id":[123,223,445]}
+    console.assert(nutParser.parse('{"id":123}').id===123,'parse as Number if not overflow');
+    console.assert(nutParser.parse('{"id":18446744073709551616}').id=='18446744073709551616','parse as string if overflow');
+</script>
+</body>
+</html>
